@@ -1,2 +1,2 @@
 # Test-Desiderata
-Test Desiderata, things wanted or needed about test
+Strategies for Creating Comprehensive Yet Efficient Test Suites
