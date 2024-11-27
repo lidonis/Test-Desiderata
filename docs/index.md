@@ -37,6 +37,8 @@ Tests execute quickly to provide rapid feedback.
 - **Trade-off**: May sacrifice thoroughness for speed.
 - **Best Practice**: Optimize test setups and aim for millisecond execution.
 
+[Read More](fast.html)
+
 
 ### **Writable**
 Tests are easy to write and maintain.
