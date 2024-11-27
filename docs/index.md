@@ -63,26 +63,24 @@ Tests should be easy to understand, allowing developers to quickly grasp the pur
 **Best Practice**: Write tests that clearly express their intent, using descriptive names to enhance understanding.
 
 ### Behavioral
+Tests must accurately reflect the behavior of the system under test. A change in the system's behavior should be reflected in a change in the test results.
 
-Tests should focus on the behavior and expected outcomes, rather than the implementation details, to ensure they remain relevant even when the underlying code changes.
+**Benefit**: Aligns tests with the actual user requirements and expectations, ensuring that the software fulfills its
+intended purpose.
 
-**Benefit**: Enhances the resilience of tests by ensuring they validate the correct behavior regardless of internal
-changes.
+**Trade-off**: May require thorough understanding and documentation of expected behaviors, which can be complex and
+time-consuming to delineate.
 
-**Trade-off**: Can be challenging to write behavioral tests for complex logic without inadvertently testing internal
-implementation.
-
-**Best Practice**: Use acceptance criteria and user stories as a guide to create tests that validate the external
-behavior of the system.
+**Best Practice**: Collaborate with stakeholders to define clear behavioral expectations.
 
 ### Structure-insensitive
-Tests should be structured in a way that does not depend on the specific implementation details, allowing for flexibility in how the code is organized.
+Tests should be unaffected by changes to the internal structure of the code. Refactoring that doesn't change functionality should not break tests.
 
-**Benefit**: Facilitates refactoring and changes in the codebase without necessitating extensive rewrites of the tests.
+**Benefit**: Ensures that tests remain valid and reliable even as the codebase evolves, reducing the risk of false negatives.
 
-**Trade-off**: May lead to tests that are less specific, potentially missing out on validating certain implementation aspects.
+**Trade-off**: May require additional effort to maintain tests that are decoupled from the implementation details.
 
-**Best Practice**: Focus on the outcomes and behaviors of the system rather than the specific structure of the code, ensuring tests remain valid as the code evolves.
+**Best Practice**: Focus on testing the public interface and behavior of the system rather than its internal structure.
 
 ### Automated
 Tests should be automated to ensure consistent execution and to reduce the manual effort required for testing.
@@ -94,10 +92,10 @@ Tests should be automated to ensure consistent execution and to reduce the manua
 **Best Practice**: Integrate automated tests into the continuous integration/continuous deployment (CI/CD) pipeline to ensure they are run regularly and provide immediate feedback on code changes.
 
 ### Specific
-Tests should be specific enough to validate particular functionalities and edge cases, ensuring comprehensive coverage of the system's behavior.
+Tests should pinpoint the exact location of errors. This aids in rapid debugging and understanding the root cause of failures.
 
-**Benefit**: Increases confidence in the system's reliability by ensuring that all critical paths and scenarios are tested.
+**Benefit**: Specifically targeted tests help in quickly identifying and addressing the root cause of issues.
 
-**Trade-off**: Overly specific tests may become brittle and require frequent updates as the code evolves.
+**Trade-off**: It can sometimes be challenging to write such focused tests, especially for complex codebases.
 
-**Best Practice**: Balance specificity with generality by creating a suite of tests that cover both common use cases and edge cases, ensuring robust validation without excessive maintenance overhead.
+**Best Practice**: Break down complex functionalities into smaller, testable units and write precise assertions to ensure that any failure points directly to the source of the issue.
