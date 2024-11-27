@@ -61,3 +61,43 @@ Tests should be easy to understand, allowing developers to quickly grasp the pur
 **Trade-off**: May require additional effort to maintain clarity, especially in complex test scenarios.
 
 **Best Practice**: Write tests that clearly express their intent, using descriptive names to enhance understanding.
+
+### Behavioral
+
+Tests should focus on the behavior and expected outcomes, rather than the implementation details, to ensure they remain relevant even when the underlying code changes.
+
+**Benefit**: Enhances the resilience of tests by ensuring they validate the correct behavior regardless of internal
+changes.
+
+**Trade-off**: Can be challenging to write behavioral tests for complex logic without inadvertently testing internal
+implementation.
+
+**Best Practice**: Use acceptance criteria and user stories as a guide to create tests that validate the external
+behavior of the system.
+
+### Structure-insensitive
+Tests should be structured in a way that does not depend on the specific implementation details, allowing for flexibility in how the code is organized.
+
+**Benefit**: Facilitates refactoring and changes in the codebase without necessitating extensive rewrites of the tests.
+
+**Trade-off**: May lead to tests that are less specific, potentially missing out on validating certain implementation aspects.
+
+**Best Practice**: Focus on the outcomes and behaviors of the system rather than the specific structure of the code, ensuring tests remain valid as the code evolves.
+
+### Automated
+Tests should be automated to ensure consistent execution and to reduce the manual effort required for testing.
+
+**Benefit**: Increases efficiency by allowing tests to be run frequently and consistently, catching issues early in the development process.
+
+**Trade-off**: Initial setup and maintenance of automated tests can require significant time and resources.
+
+**Best Practice**: Integrate automated tests into the continuous integration/continuous deployment (CI/CD) pipeline to ensure they are run regularly and provide immediate feedback on code changes.
+
+### Specific
+Tests should be specific enough to validate particular functionalities and edge cases, ensuring comprehensive coverage of the system's behavior.
+
+**Benefit**: Increases confidence in the system's reliability by ensuring that all critical paths and scenarios are tested.
+
+**Trade-off**: Overly specific tests may become brittle and require frequent updates as the code evolves.
+
+**Best Practice**: Balance specificity with generality by creating a suite of tests that cover both common use cases and edge cases, ensuring robust validation without excessive maintenance overhead.
