@@ -15,3 +15,13 @@ This isolation allows for easier debugging and more reliable test results.
 However, this trade-off is often justified by the increased reliability and maintainability of the tests.
 
 **Best Practice**: Use the "Boy Scout Rule": Leave the system in the same state as you found it. Clean up resources and reset global variables.
+
+### Composable
+
+Tests and underlying code should be designed in a way that allows different dimensions of variability to be tested independently and then combined.
+
+**Benefit**: Reduces the total number of tests needed by focusing on testing individual components and their interactions avoiding combinatorial growth.
+
+**Trade-off**: Requires additional effort and forethought during the initial implementation, which can increase complexity.
+
+**Best Practice**: Strive for modular code and use dependency injection. This allows you to swap components in and out easily, facilitating composability in tests.
