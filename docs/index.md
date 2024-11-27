@@ -25,3 +25,12 @@ Tests and underlying code should be designed in a way that allows different dime
 **Trade-off**: Requires additional effort and forethought during the initial implementation, which can increase complexity.
 
 **Best Practice**: Strive for modular code and use dependency injection. This allows you to swap components in and out easily, facilitating composability in tests.
+
+### Deterministic 
+Tests should produce the same results given the same inputs, ensuring that the behavior of the code is predictable and reliable.
+
+**Benefit**: Enhances confidence in the code by ensuring that tests will consistently pass or fail based on the code's behavior.
+
+**Trade-off**: Achieving determinism may require additional effort to control external factors, such as random number generation or time-dependent behavior.
+
+**Best Practice**: Use test doubles to isolate tests from external dependencies, ensuring that tests remain deterministic and focused on the code being tested.
