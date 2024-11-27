@@ -47,6 +47,8 @@ Tests are easy to write and maintain.
 - **Best Practice**: Provide clear guidelines and use simple naming conventions.
 
 
+[Read More](writable.html)
+
 ### **Readable**
 Tests are easy to understand at a glance.
 - **Benefit**: Simplifies collaboration and onboarding.
