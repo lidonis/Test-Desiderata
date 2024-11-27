@@ -23,6 +23,8 @@ Tests focus on individual components that combine seamlessly.
 - **Trade-off**: Increases initial complexity.
 - **Best Practice**: Use modular code and dependency injection.
 
+[Read More](composable.html)
+
 
 ### **Deterministic**
 Tests produce consistent results for the same inputs.
