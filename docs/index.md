@@ -5,7 +5,6 @@ Inspired by [testdesiderata.com](https://testdesiderata.com)
 Test desiderata refers to essential principles ensuring your test suite is efficient and comprehensive.
 These principles guide the creation of tests that are maintainable, readable, and valuable.
 
-
 ## Key Principles
 
 ### **Isolated**
@@ -16,7 +15,6 @@ Each test runs independently to avoid interference.
 
 [Read More](isolated.html)
 
-
 ### **Composable**
 Tests focus on individual components that combine seamlessly.
 - **Benefit**: Minimizes number tests avoiding combinatorial growth.
@@ -25,13 +23,13 @@ Tests focus on individual components that combine seamlessly.
 
 [Read More](composable.html)
 
-
 ### **Deterministic**
 Tests produce consistent results for the same inputs.
 - **Benefit**: Reliable tests build confidence by ensuring consistent outcomes.
 - **Trade-off**: Requires control over external factors like time or randomness.
 - **Best Practice**: Use test doubles to isolate dependencies.
 
+[Read More](deterministic.html)
 
 ### **Fast**
 Tests execute quickly to provide rapid feedback.
