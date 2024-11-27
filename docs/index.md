@@ -14,6 +14,8 @@ Each test runs independently to avoid interference.
 - **Trade-off**: Setup/teardown may increase execution time.
 - **Best Practice**: Reset resources and global state between tests.
 
+[Read More](isolated.html)
+
 
 ### **Composable**
 Tests focus on individual components that combine seamlessly.
