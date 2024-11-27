@@ -1,130 +1,98 @@
 Inspired by [testdesiderata.com](https://testdesiderata.com)
 
 ## Understanding Test Desiderata
-Test desiderata refers to the essential aspects and principles that ensure your test suite is both comprehensive and efficient.
-Striving for excellent code quality and reliable software delivery, these principles guide the development of tests that are maintainable, readable, and valuable.
+
+Test desiderata refers to essential principles ensuring your test suite is efficient and comprehensive.
+These principles guide the creation of tests that are maintainable, readable, and valuable.
+
 
 ## Key Principles
-### Isolated
-Tests should be independent of each other, ensuring that the outcome of one test does not affect another.
-This isolation allows for easier debugging and more reliable test results.
 
-**Benefit**: Provides accurate pinpointing of failures and simplifies test maintenance.
+### **Isolated**
+Each test runs independently to avoid interference.
+- **Benefit**: Accurate failure pinpointing simplifies debugging.
+- **Trade-off**: Setup/teardown may increase execution time.
+- **Best Practice**: Reset resources and global state between tests.
 
-**Trade-off**: There can be potential overhead in setting up and tearing down the state before and after each test. This might increase the total execution time of the test suite, especially if the tests require extensive setup or deal with large datasets.
-However, this trade-off is often justified by the increased reliability and maintainability of the tests.
 
-**Best Practice**: Use the "Boy Scout Rule": Leave the system in the same state as you found it. Clean up resources and reset global variables.
+### **Composable**
+Tests focus on individual components that combine seamlessly.
+- **Benefit**: Minimizes number tests avoiding combinatorial growth.
+- **Trade-off**: Increases initial complexity.
+- **Best Practice**: Use modular code and dependency injection.
 
-### Composable
 
-Tests and underlying code should be designed in a way that allows different dimensions of variability to be tested independently and then combined.
+### **Deterministic**
+Tests produce consistent results for the same inputs.
+- **Benefit**: Reliable tests build confidence by ensuring consistent outcomes.
+- **Trade-off**: Requires control over external factors like time or randomness.
+- **Best Practice**: Use test doubles to isolate dependencies.
 
-**Benefit**: Reduces the total number of tests needed by focusing on testing individual components and their interactions avoiding combinatorial growth.
 
-**Trade-off**: Requires additional effort and forethought during the initial implementation, which can increase complexity.
+### **Fast**
+Tests execute quickly to provide rapid feedback.
+- **Benefit**: Rapid feedback accelerates development.
+- **Trade-off**: May sacrifice thoroughness for speed.
+- **Best Practice**: Optimize test setups and aim for millisecond execution.
 
-**Best Practice**: Strive for modular code and use dependency injection. This allows you to swap components in and out easily, facilitating composability in tests.
 
-### Deterministic 
-Tests should produce the same results given the same inputs, ensuring that the behavior of the code is predictable and reliable.
+### **Writable**
+Tests are easy to write and maintain.
+- **Benefit**: Encourages adoption and contribution to the test suite.
+- **Trade-off**: Oversimplification risks inadequate coverage.
+- **Best Practice**: Provide clear guidelines and use simple naming conventions.
 
-**Benefit**: Enhances confidence in the code by ensuring that tests will consistently pass or fail based on the code's behavior.
 
-**Trade-off**: Achieving determinism may require additional effort to control external factors, such as random number generation or time-dependent behavior.
+### **Readable**
+Tests are easy to understand at a glance.
+- **Benefit**: Simplifies collaboration and onboarding.
+- **Trade-off**: Requires effort to maintain clarity.
+- **Best Practice**: Use descriptive names and clearly express test intent.
 
-**Best Practice**: Use test doubles to isolate tests from external dependencies, ensuring that tests remain deterministic and focused on the code being tested.
 
-### Fast
-Tests should execute quickly to provide rapid feedback during development, allowing for a more efficient workflow.
+### **Behavioral**
+Tests reflect the expected behavior of the system.
+- **Benefit**: Aligns tests with user expectations.
+- **Trade-off**: Needs thorough documentation of expected behavior.
+- **Best Practice**: Define behaviors collaboratively with stakeholders.
 
-**Benefit**: Encourages frequent testing and integration, leading to faster identification of issues.
 
-**Trade-off**: May require prioritization of speed over thoroughness, potentially leading to missed edge cases.
+### **Structure-Insensitive**
+Tests remain valid despite internal code changes.
+- **Benefit**: Ensures tests remain valid during refactors.
+- **Trade-off**: Decoupling tests from implementation requires effort.
+- **Best Practice**: Focus on public interfaces over internal details.
 
-**Best Practice**: Aim for tests to run in milliseconds and avoid unnecessary complexity in test setup.
 
-### Writable
-Tests should be easy to write, enabling developers to create and maintain them without excessive effort.
+### **Automated**
+Tests run automatically to ensure consistency.
+- **Benefit**: Enables frequent, consistent execution.
+- **Trade-off**: Automation setup demands upfront investment.
+- **Best Practice**: Run automated tests via CI/CD pipelines.
 
-**Benefit**: Lowers the barrier to entry for writing tests, encouraging more developers to contribute to the test suite.
 
-**Trade-off**: May lead to oversimplification, where tests do not adequately cover complex scenarios.
+### **Specific**
+Tests pinpoint issues precisely for faster debugging.
+- **Benefit**: Quickly identifies root causes of failures.
+- **Trade-off**: Writing highly focused tests can be challenging.
+- **Best Practice**: Break down functionalities and write precise assertions.
 
-**Best Practice**: Use clear naming conventions and structure in tests, and provide documentation to guide developers in writing effective tests.
 
-### Readable
-Tests should be easy to understand, allowing developers to quickly grasp the purpose and functionality of each test case.
+### **Predictive**
+Tests mirror real-world behavior to ensure reliability.
+- **Benefit**: Provides confidence in production behavior.
+- **Trade-off**: Requires understanding of the production environment.
+- **Best Practice**: Use real-world scenarios and data for test cases.
 
-**Benefit**: Improves collaboration and reduces the time needed to onboard new team members or revisit old tests.
 
-**Trade-off**: May require additional effort to maintain clarity, especially in complex test scenarios.
-
-**Best Practice**: Write tests that clearly express their intent, using descriptive names to enhance understanding.
-
-### Behavioral
-Tests must accurately reflect the behavior of the system under test. A change in the system's behavior should be reflected in a change in the test results.
-
-**Benefit**: Aligns tests with the actual user requirements and expectations, ensuring that the software fulfills its
-intended purpose.
-
-**Trade-off**: May require thorough understanding and documentation of expected behaviors, which can be complex and
-time-consuming to delineate.
-
-**Best Practice**: Collaborate with stakeholders to define clear behavioral expectations.
-
-### Structure-insensitive
-Tests should be unaffected by changes to the internal structure of the code. Refactoring that doesn't change functionality should not break tests.
-
-**Benefit**: Ensures that tests remain valid and reliable even as the codebase evolves, reducing the risk of false negatives.
-
-**Trade-off**: May require additional effort to maintain tests that are decoupled from the implementation details.
-
-**Best Practice**: Focus on testing the public interface and behavior of the system rather than its internal structure.
-
-### Automated
-Tests should be automated to ensure consistent execution and to reduce the manual effort required for testing.
-
-**Benefit**: Increases efficiency by allowing tests to be run frequently and consistently, catching issues early in the development process.
-
-**Trade-off**: Initial setup and maintenance of automated tests can require significant time and resources.
-
-**Best Practice**: Integrate automated tests into the continuous integration/continuous deployment (CI/CD) pipeline to ensure they are run regularly and provide immediate feedback on code changes.
-
-### Specific
-Tests should pinpoint the exact location of errors. This aids in rapid debugging and understanding the root cause of failures.
-
-**Benefit**: Specifically targeted tests help in quickly identifying and addressing the root cause of issues.
-
-**Trade-off**: It can sometimes be challenging to write such focused tests, especially for complex codebases.
-
-**Best Practice**: Break down complex functionalities into smaller, testable units and write precise assertions to ensure that any failure points directly to the source of the issue.
-
-### Predictive
-Test results should accurately predict the behavior of the system in production.
-
-**Benefit**: Provides confidence that the system will behave as expected under real-world conditions, reducing the likelihood of unexpected issues in production.
-
-**Trade-off**: Requires a deep understanding of the production environment and potential edge cases that may not be covered in tests.
-
-**Best Practice**: Use real-world scenarios and data to inform test cases, and continuously update tests as the system evolves to reflect changes in expected behavior.
-
-### Inspiring
-Tests should inspire confidence in the system's quality and reliability.
-
-**Benefit**: Motivates the development team to prioritize quality and encourages a culture of testing within the organization.
-
-**Trade-off**: May require additional time and resources to create engaging and meaningful tests that resonate with the team.
-
-**Best Practice**: Share success stories and metrics that highlight the impact of testing on project outcomes, fostering a positive attitude towards testing practices.
+### **Inspiring**
+Tests foster confidence in the system's quality.
+- **Benefit**: Motivates quality-focused development practices.
+- **Trade-off**: Meaningful tests may require extra creativity and effort.
+- **Best Practice**: Share success metrics to highlight testing's value.
 
 
 ## Balancing Test Properties
-
-Not all tests need to exhibit every property. However, any property sacrificed should be compensated by a property of greater value.
-
-Certain properties complement one another. For instance, automated tests run more quickly.
-
-Conversely, some properties may conflict. Enhancing test predictive accuracy for production behavior often results in slower tests.
-
-Occasionally, conflicts between properties are only apparent. Leveraging composability can yield tests that are both faster and more predictive.
+Not every test must embody all properties. Sacrifices should be compensated by more valuable traits.
+- **Complementary Properties**: Automated tests can enhance speed and accuracy.
+- **Apparent Conflicts**: Composability can help achieve both speed and predictive accuracy.
