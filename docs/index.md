@@ -99,3 +99,32 @@ Tests should pinpoint the exact location of errors. This aids in rapid debugging
 **Trade-off**: It can sometimes be challenging to write such focused tests, especially for complex codebases.
 
 **Best Practice**: Break down complex functionalities into smaller, testable units and write precise assertions to ensure that any failure points directly to the source of the issue.
+
+### Predictive
+Test results should accurately predict the behavior of the system in production.
+
+**Benefit**: Provides confidence that the system will behave as expected under real-world conditions, reducing the likelihood of unexpected issues in production.
+
+**Trade-off**: Requires a deep understanding of the production environment and potential edge cases that may not be covered in tests.
+
+**Best Practice**: Use real-world scenarios and data to inform test cases, and continuously update tests as the system evolves to reflect changes in expected behavior.
+
+### Inspiring
+Tests should inspire confidence in the system's quality and reliability.
+
+**Benefit**: Motivates the development team to prioritize quality and encourages a culture of testing within the organization.
+
+**Trade-off**: May require additional time and resources to create engaging and meaningful tests that resonate with the team.
+
+**Best Practice**: Share success stories and metrics that highlight the impact of testing on project outcomes, fostering a positive attitude towards testing practices.
+
+
+## Balancing Test Properties
+
+Not all tests need to exhibit every property. However, any property sacrificed should be compensated by a property of greater value.
+
+Certain properties complement one another. For instance, automated tests run more quickly.
+
+Conversely, some properties may conflict. Enhancing test predictive accuracy for production behavior often results in slower tests.
+
+Occasionally, conflicts between properties are only apparent. Leveraging composability can yield tests that are both faster and more predictive.
