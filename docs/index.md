@@ -34,3 +34,30 @@ Tests should produce the same results given the same inputs, ensuring that the b
 **Trade-off**: Achieving determinism may require additional effort to control external factors, such as random number generation or time-dependent behavior.
 
 **Best Practice**: Use test doubles to isolate tests from external dependencies, ensuring that tests remain deterministic and focused on the code being tested.
+
+### Fast
+Tests should execute quickly to provide rapid feedback during development, allowing for a more efficient workflow.
+
+**Benefit**: Encourages frequent testing and integration, leading to faster identification of issues.
+
+**Trade-off**: May require prioritization of speed over thoroughness, potentially leading to missed edge cases.
+
+**Best Practice**: Aim for tests to run in milliseconds and avoid unnecessary complexity in test setup.
+
+### Writable
+Tests should be easy to write, enabling developers to create and maintain them without excessive effort.
+
+**Benefit**: Lowers the barrier to entry for writing tests, encouraging more developers to contribute to the test suite.
+
+**Trade-off**: May lead to oversimplification, where tests do not adequately cover complex scenarios.
+
+**Best Practice**: Use clear naming conventions and structure in tests, and provide documentation to guide developers in writing effective tests.
+
+### Readable
+Tests should be easy to understand, allowing developers to quickly grasp the purpose and functionality of each test case.
+
+**Benefit**: Improves collaboration and reduces the time needed to onboard new team members or revisit old tests.
+
+**Trade-off**: May require additional effort to maintain clarity, especially in complex test scenarios.
+
+**Best Practice**: Write tests that clearly express their intent, using descriptive names to enhance understanding.
