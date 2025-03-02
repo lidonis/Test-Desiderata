@@ -1,8 +1,7 @@
 # Isolated Tests
 
 ## Definition
-An isolated test runs independently, ensuring its result is unaffected by the state or behavior of other tests.  
-Each test starts with a clean slate and leaves no residual effects that could impact subsequent tests.
+In the context of software testing, isolation is a key principle. An isolated test runs independently, ensuring its result is unaffected by the state or behavior of other tests. Each test starts with a clean slate and leaves no residual effects that could impact subsequent tests.
 
 ## Why Isolation Matters
 
@@ -31,6 +30,8 @@ Recreating the necessary state for systems with intricate interdependencies can 
 
 **Example**: After testing a function that modifies shared data, reset all variables to their default values to ensure the next test starts with the expected state.
 
+**Example**: If your test modifies a database, ensure that the database is reset to its initial state after the test completes.
+
 ### Substitute External Dependencies
 - Replace real dependencies with alternatives designed for testing to prevent interference.
 - Simulate external systems rather than relying on real-world components.
@@ -43,11 +44,15 @@ Recreating the necessary state for systems with intricate interdependencies can 
 
 **Example**: Replace calls to a random number generator with predefined values to ensure tests produce consistent outcomes.
 
+**Example**: If your test involves date and time, use a fixed date and time value to ensure consistency.
+
 ### Avoid Persistent State
 - Use transient or ephemeral resources to prevent contamination from lingering data.
 - Ensure each test operates on a clean slate of data.
 
-**Example**: Use temporary data structures or files created at runtime, which are removed once the test completes.
+**Examples**:
+- Use temporary data structures or files created at runtime, which are removed once the test completes.
+- If your test involves file I/O, use temporary files that are deleted after the test.
 
 ### Run Tests Independently
 - Avoid dependencies between tests.
@@ -58,9 +63,12 @@ Recreating the necessary state for systems with intricate interdependencies can 
 ## Additional Benefit: Parallel Execution
 Isolated tests, free of shared state, can run in parallel, significantly reducing the total execution time of the test suite.
 
-**Example**: Running isolated tests for different modules in parallel can drastically improve the efficiency of the testing process, especially for large systems.
+**Examples**:
+- Use a test runner that supports parallel execution to take advantage of this benefit.
+- Running isolated tests for different modules in parallel can drastically improve the efficiency of the testing process, especially for large systems.
 
 ## Conclusion
-Isolated tests are crucial for building a reliable and maintainable test suite.  
-Although they may introduce overhead in setup and teardown, their benefits in consistency, debugging, and scalability far outweigh these costs.  
-By following best practices and focusing on independent test design, teams can ensure their tests remain robust, efficient, and adaptable.
+Isolated tests are crucial for building a reliable and maintainable test suite. Although they may introduce overhead in setup and teardown, their benefits in consistency, debugging, and scalability far outweigh these costs. By following best practices and focusing on independent test design, teams can ensure their tests remain robust, efficient, and adaptable.
+
+## Further Reading
+- [Martin Fowler - Eradicating Non-Determinism in Tests](https://martinfowler.com/articles/nonDeterminism.html)
