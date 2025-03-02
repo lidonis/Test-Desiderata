@@ -56,6 +56,8 @@ Tests are easy to understand at a glance.
 - **Best Practice**: Use descriptive names and clearly express test intent.
 
 
+[Read More](readable.html)
+
 ### **Behavioral**
 Tests reflect the expected behavior of the system.
 - **Benefit**: Aligns tests with user expectations.
