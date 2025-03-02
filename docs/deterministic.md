@@ -1,69 +1,71 @@
 # Deterministic Tests
 
+## Table of Contents
+
+- [Definition](#definition)
+- [Why Determinism Matters](#why-determinism-matters)
+- [Challenges of Deterministic Tests](#challenges-of-deterministic-tests)
+- [Best Practices for Deterministic Tests](#best-practices-for-deterministic-tests)
+- [Practical Example](#practical-example)
+- [Common Pitfalls](#common-pitfalls)
+- [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
+
 ## Definition
-A deterministic test produces the same outcome every time it runs, given the same input and environment.  
-This consistency ensures that the test results reflect only the behavior of the code under test, free from unpredictable external influences.
+Deterministic tests are tests that produce consistent results for the same inputs, regardless of external factors.
 
 ## Why Determinism Matters
 
-### Reliable Feedback
-Deterministic tests provide consistent results, making it easier to trust their outcomes. Flaky or inconsistent tests can erode confidence in the testing process and lead to wasted debugging efforts.
+### Reliability
+Deterministic tests ensure that the test results are reliable and reproducible.
 
-**Example**: A test that occasionally fails due to timeouts or race conditions can mislead developers, obscuring whether the issue lies in the code or the test itself.
+### Debugging
+Deterministic tests make it easier to identify and debug issues by providing consistent outcomes.
 
-### Simplifies Debugging
-When a deterministic test fails, the root cause is in the code or test logic—not in environmental or external factors—making debugging more straightforward.
-
-**Example**: If a test for a sorting algorithm fails, a deterministic test ensures the issue is in the algorithm, not due to varying input orders.
-
-### Supports Automation
-Deterministic tests are critical for automated test suites, where consistency and reliability are necessary for continuous integration and deployment (CI/CD) pipelines.
-
-**Example**: In CI/CD, repeated failures in non-deterministic tests can block deployments even when the code is correct.
+### Confidence
+Deterministic tests build confidence in the test suite by ensuring that tests produce the same results every time they are run.
 
 ## Challenges of Deterministic Tests
 
-### External Dependencies
-Tests that rely on external systems (e.g., databases, APIs, or hardware) may introduce variability, as these systems can change state or behavior unpredictably.
+### Controlling External Factors
+Ensuring that tests are deterministic requires controlling external factors like time, randomness, and dependencies.
 
-**Example**: A test relying on a live weather API could fail due to changes in the external service’s response format.
-
-### Environmental Factors
-Differences in system configurations, such as operating system, timezone, or network latency, can introduce non-determinism.
-
-**Example**: A test depending on system clock values may produce different results in different timezones.
-
-### Randomness
-Code that uses random number generators or probabilistic algorithms can introduce variability in test results.
-
-**Example**: A test for a game that generates random puzzles may fail if the puzzle generated during the test is unsolvable.
+### Complexity
+Designing deterministic tests can be complex and requires careful planning.
 
 ## Best Practices for Deterministic Tests
 
-### Control External Dependencies
-- Replace external dependencies with test doubles to ensure consistent behavior.
-- Simulate predictable responses from external services.
+### Use Test Doubles
+**Replace real dependencies with test doubles to isolate the system under test and control external factors.**
 
-**Example**: Use a fake API server that returns fixed responses instead of relying on a live external API.
+- Use mocks, stubs, and fakes to simulate dependencies and control their behavior.
+- Ensure that test doubles provide consistent and predictable responses.
 
 ### Control Randomness
-- Use fixed seeds for random number generators to ensure they produce the same sequence of values in every test.
-- Replace non-deterministic logic with deterministic equivalents where feasible.
+**Make random behavior deterministic by controlling sources of variability.**
 
-**Example**: Set a seed for a random shuffle function so the order of shuffled elements remains consistent during tests.
+- Replace calls to random number generators with predefined values.
+- Use fixed seeds for random number generators to ensure consistent outcomes.
 
-### Use Fixed Timestamps
-- Replace real-time calls with fixed or controlled time values during tests.
+### Isolate Time-Dependent Code
+**Isolate time-dependent code and use fixed values for date and time.**
 
-**Example**: Replace the clock to always return `2024-01-01T00:00:00Z` when testing date-dependent functionality.
+- Use libraries that allow for time manipulation, such as `freezegun` in Python.
+- Ensure that time-dependent code produces consistent results regardless of the current time.
 
-### Avoid Race Conditions
-- Use synchronization mechanisms to ensure that multithreaded or parallel tests run without interference.
-- Write tests assuming no assumptions about execution order in concurrent systems.
+## Practical Example
+Deterministic tests can be implemented using various testing frameworks and tools. The key is to ensure that tests produce consistent results for the same inputs, regardless of external factors.
 
-**Example**: Use locks or barriers to prevent tests from accessing shared resources simultaneously.
+## Common Pitfalls
+
+### Over-Mocking
+**Avoid mocking too many dependencies, as this can make tests brittle and less representative of real behavior.**
+
+### Ignoring Non-Deterministic Factors
+**Do not overlook non-deterministic factors like network latency or concurrency issues that can affect test outcomes.**
 
 ## Conclusion
-Deterministic tests are essential for building trust in a test suite.  
-They provide consistent feedback, simplify debugging, and enable automated pipelines to run reliably. While achieving determinism may require controlling external dependencies, randomness, and environmental factors, the benefits far outweigh the effort.  
-By following best practices, teams can ensure their tests remain predictable, reliable, and robust across environments and over time.
+Deterministic tests are crucial for building a reliable and maintainable test suite. By following best practices and focusing on test doubles and controlling external factors, teams can ensure their tests remain consistent and reproducible.
+
+## Further Reading
+- [Martin Fowler - Eradicating Non-Determinism in Tests](https://martinfowler.com/articles/nonDeterminism.html)

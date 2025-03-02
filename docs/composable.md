@@ -1,75 +1,71 @@
 # Composable Tests
 
+## Table of Contents
+
+- [Definition](#definition)
+- [Why Composability Matters](#why-composability-matters)
+- [Challenges of Composable Tests](#challenges-of-composable-tests)
+- [Best Practices for Composable Tests](#best-practices-for-composable-tests)
+- [Practical Example](#practical-example)
+- [Common Pitfalls](#common-pitfalls)
+- [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
+
 ## Definition
-Composable tests are designed to evaluate individual components or aspects of a system independently, allowing these smaller tests to be combined into more complex scenarios.  
-This approach ensures that tests are modular and reusable, minimizing redundancy while maximizing coverage.
+Composable tests are tests that focus on individual components and can be combined seamlessly to test larger systems.
 
 ## Why Composability Matters
 
-### Reduces Redundancy
-By testing components individually, composable tests avoid duplicating effort and reduce the total number of tests required.
+### Scalability
+Composable tests allow for testing complex systems by breaking them down into smaller, manageable components.
 
-**Example**: Instead of writing separate tests for every combination of a user’s role and permission, test roles and permissions independently, and then validate their interactions.
+### Maintainability
+Composable tests are easier to maintain and update as individual components evolve.
 
-### Encourages Reusability
-When components are tested in isolation, the same tests can be reused in various combinations or extended for more advanced cases.
-
-**Example**: A test for a payment processor module can be reused across different payment flows, such as subscriptions or one-time purchases.
-
-### Improves Maintainability
-Composable tests are easier to maintain since each test targets a specific component or interaction. Changes to the system can be isolated to the affected tests, reducing the impact of modifications.
-
-**Example**: If a database query method changes, only the tests for that method need adjustment, not all tests that use the database.
-
-### Enables Faster Debugging
-When a test fails, isolating the failure to a specific component or interaction simplifies debugging.
-
-**Example**: If a failure occurs in a test combining multiple modules, the composable structure allows identifying which module caused the issue.
+### Reusability
+Composable tests can be reused across different parts of the system, reducing duplication and effort.
 
 ## Challenges of Composable Tests
 
-### Requires Modular Code
-Composability depends on the system’s design. Highly coupled or monolithic systems can make it difficult to isolate and compose tests effectively.
-
 ### Initial Complexity
-Designing tests with composability in mind requires planning and forethought, which can increase the initial effort.
+Designing composable tests requires careful planning and can introduce initial complexity.
 
-### Risk of Missing Context
-Focusing on isolated components might overlook context-dependent behaviors or emergent issues when components interact in unexpected ways.
+### Dependency Management
+Managing dependencies between components can be challenging and requires careful coordination.
 
 ## Best Practices for Composable Tests
 
-### Focus on Component Boundaries
-Design tests around well-defined boundaries to ensure each component’s behavior is tested independently.
+### Use Modular Code
+**Write modular code that can be tested independently and combined to test larger systems.**
 
-**Example**: Test a logging service as an isolated unit rather than as part of a larger application flow.
+- Break down the system into smaller, reusable components.
+- Ensure that each component has a well-defined interface and behavior.
 
-### Use Mocks and Stubs
-Replace dependencies with mocks or stubs to simulate interactions and isolate the component under test.
+### Leverage Dependency Injection
+**Use dependency injection to manage dependencies between components.**
 
-**Example**: Use a mock email service to verify that an email is sent without relying on an external SMTP server.
+- Inject dependencies explicitly to make them easier to test and manage.
+- Avoid tight coupling between components to enhance testability.
 
-### Modularize Test Code
-Organize tests so that common setup logic, shared data, and reusable utilities are easily accessible.
+### Test Components in Isolation
+**Test individual components in isolation before combining them to test larger systems.**
 
-**Example**: Define reusable functions or fixtures for common test data like user profiles or product configurations.
+- Use mocking and stubbing to simulate dependencies and isolate components.
+- Ensure that each component behaves correctly before integrating it with other components.
 
-### Parameterize Tests
-Write parameterized tests to handle different inputs or configurations for the same component, avoiding combinatorial explosion.
+## Practical Example
+Composable tests can be implemented using various testing frameworks and tools. The key is to ensure that tests are modular and can be combined seamlessly to test larger systems.
 
-**Example**: Test a pricing module with various discount rates or tax calculations by iterating over a set of predefined parameters.
+## Common Pitfalls
 
-### Validate Composed Scenarios
-While individual components are tested in isolation, also test combinations of components to validate interactions and identify integration issues.
+### Over-Segmentation
+**Avoid breaking down the system into overly small components that are difficult to manage and test.**
 
-**Example**: After testing the authentication and payment modules separately, create tests for the checkout process where these modules interact.
-
-## Additional Benefit: Scalability
-Composable tests support scalable testing practices by breaking complex scenarios into manageable pieces, making it easier to expand the test suite as the system grows.
-
-**Example**: Add tests for new modules incrementally without needing to rewrite existing tests or overhaul the structure.
+### Ignoring Integration Tests
+**Do not overlook integration tests that validate the behavior of the system as a whole.**
 
 ## Conclusion
-Composable tests provide a powerful framework for creating modular, reusable, and maintainable test suites.  
-While the initial setup may require careful planning and system modularization, the long-term benefits include reduced redundancy, faster debugging, and easier maintenance.  
-By adopting composable testing practices, teams can efficiently cover complex systems and ensure robust, scalable test coverage.
+Composable tests are essential for testing complex systems effectively. By following best practices and focusing on modular code and dependency injection, teams can create scalable and maintainable composable tests.
+
+## Further Reading
+- [Modular Programming](https://en.wikipedia.org/wiki/Modular_programming)

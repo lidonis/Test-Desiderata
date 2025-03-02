@@ -135,3 +135,7 @@ Not every test must embody all properties. Sacrifices should be compensated by m
 ## Conclusion
 
 By understanding and applying these test desiderata principles, you can create a robust and effective test suite that balances various test properties. This will help you build confidence in your system's quality and foster a culture of quality-focused development.
+
+## Further Reading
+- [testdesiderata.com](https://testdesiderata.com)
+- [Martin Fowler - Testing](https://martinfowler.com/testing/)
