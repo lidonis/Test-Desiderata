@@ -69,3 +69,4 @@ Composable tests are essential for testing complex systems effectively. By follo
 
 ## Further Reading
 - [Modular Programming](https://en.wikipedia.org/wiki/Modular_programming)
+- [Dependency Injection](https://martinfowler.com/articles/injection.html)

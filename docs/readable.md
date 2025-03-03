@@ -9,7 +9,6 @@
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
-- [Further Reading](#further-reading)
 
 ## Definition
 Readable tests are tests that are easy to understand at a glance, facilitating collaboration and maintenance.
@@ -66,6 +65,3 @@ Readable tests can be implemented using various testing frameworks and tools. Th
 
 ## Conclusion
 Readable tests are crucial for facilitating collaboration, maintenance, and onboarding. By following best practices and focusing on descriptive names, clear intent, and simplicity, teams can create readable tests that are easy to understand and maintain.
-
-## Further Reading
-- [The Art of Readable Code](https://www.oreilly.com/library/view/the-art-of/9781449318482/)

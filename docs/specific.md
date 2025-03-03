@@ -9,7 +9,6 @@
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
-- [Further Reading](#further-reading)
 
 ## Definition
 Specific tests are tests that pinpoint issues precisely, making it easier to identify and debug failures.
@@ -66,6 +65,3 @@ Specific tests can be implemented using various testing frameworks and tools. Th
 
 ## Conclusion
 Specific tests are crucial for identifying and addressing issues precisely and efficiently. By following best practices and focusing on breaking down functionalities, writing precise assertions, and isolating tests, teams can create effective specific tests that improve the overall quality of the test suite.
-
-## Further Reading
-- [Test-Driven Development by Example](https://www.oreilly.com/library/view/test-driven-development-by/0321146530/)

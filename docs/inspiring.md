@@ -9,7 +9,6 @@
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
-- [Further Reading](#further-reading)
 
 ## Definition
 Inspiring tests are tests that foster confidence in the system's quality and motivate quality-focused development practices.
@@ -66,6 +65,3 @@ Inspiring tests can be created using various testing frameworks and tools. The k
 
 ## Conclusion
 Inspiring tests are crucial for fostering a culture of quality-focused development. By following best practices and focusing on meaningful and engaging tests, teams can create inspiring tests that motivate developers and build confidence in the system's quality.
-
-## Further Reading
-- [Test Desiderata](https://testdesiderata.com)

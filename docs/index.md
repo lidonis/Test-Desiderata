@@ -19,6 +19,7 @@ Inspired by [testdesiderata.com](https://testdesiderata.com)
   - [Inspiring](#inspiring)
 - [Balancing Test Properties](#balancing-test-properties)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Understanding Test Desiderata
 
@@ -139,3 +140,4 @@ By understanding and applying these test desiderata principles, you can create a
 ## Further Reading
 - [testdesiderata.com](https://testdesiderata.com)
 - [Martin Fowler - Testing](https://martinfowler.com/testing/)
+- [Google Testing Blog](https://testing.googleblog.com/)

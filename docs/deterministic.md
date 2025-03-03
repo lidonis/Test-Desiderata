@@ -69,3 +69,4 @@ Deterministic tests are crucial for building a reliable and maintainable test su
 
 ## Further Reading
 - [Martin Fowler - Eradicating Non-Determinism in Tests](https://martinfowler.com/articles/nonDeterminism.html)
+- [Martin Fowler - Test Doubles](https://martinfowler.com/bliki/TestDouble.html)

@@ -69,3 +69,4 @@ Behavioral tests are crucial for ensuring that the system behaves as expected fr
 
 ## Further Reading
 - [Behavior-Driven Development - Cucumber](https://cucumber.io/docs/bdd/)
+- [Gherkin Syntax](https://cucumber.io/docs/gherkin/)

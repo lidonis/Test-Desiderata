@@ -6,8 +6,6 @@
 - [Why Speed Matters](#why-speed-matters)
 - [Challenges of Fast Tests](#challenges-of-fast-tests)
 - [Best Practices for Fast Tests](#best-practices-for-fast-tests)
-- [Practical Example](#practical-example)
-- [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
 - [Further Reading](#further-reading)
 
@@ -94,4 +92,5 @@ Fast tests support scalability by ensuring that large test suites can run within
 Fast tests are essential for maintaining a productive development workflow and ensuring rapid feedback during CI/CD cycles. By focusing on small, focused tests, optimizing setup and teardown, and leveraging parallel execution, teams can achieve speed without sacrificing reliability or coverage. Fast tests not only improve productivity but also encourage a culture of frequent testing, enabling robust and agile software development.
 
 ## Further Reading
-- [Google Testing Blog - Flaky Tests at Google](https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html)
+- [Martin Fowler - Testing](https://martinfowler.com/testing/)
+- [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html)

@@ -9,7 +9,6 @@
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
-- [Further Reading](#further-reading)
 
 ## Definition
 Predictive tests are tests that mirror real-world behavior to ensure reliability and predictability in production.
@@ -66,6 +65,3 @@ Predictive tests can be implemented using various testing frameworks and tools. 
 
 ## Conclusion
 Predictive tests are crucial for ensuring that the system behaves as expected in real-world scenarios. By following best practices and focusing on real-world scenarios and simulation, teams can create effective predictive tests that validate the system's behavior and improve its robustness.
-
-## Further Reading
-- [Chaos Engineering](https://principlesofchaos.org/)

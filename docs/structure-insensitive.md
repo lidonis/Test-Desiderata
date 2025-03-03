@@ -9,7 +9,6 @@
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
-- [Further Reading](#further-reading)
 
 ## Definition
 Structure-insensitive tests are tests that remain valid despite internal code changes, focusing on the system's behavior rather than its implementation.
@@ -66,6 +65,3 @@ Structure-insensitive tests can be implemented using various testing frameworks 
 
 ## Conclusion
 Structure-insensitive tests are crucial for ensuring that tests remain valid during refactoring and provide flexibility and maintainability. By following best practices and focusing on public interfaces, behavioral testing, and abstraction, teams can create effective structure-insensitive tests that are adaptable to changes.
-
-## Further Reading
-- [Refactoring: Improving the Design of Existing Code](https://www.oreilly.com/library/view/refactoring-improving-the/0201485672/)

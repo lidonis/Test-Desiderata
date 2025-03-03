@@ -9,7 +9,6 @@
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
-- [Further Reading](#further-reading)
 
 ## Definition
 Writable tests are tests that are easy to write and maintain, encouraging adoption and contribution to the test suite.
@@ -66,6 +65,3 @@ Writable tests can be implemented using various testing frameworks and tools. Th
 
 ## Conclusion
 Writable tests are crucial for encouraging adoption, improving productivity, and facilitating collaboration. By following best practices and focusing on clear guidelines, simple naming conventions, and simplicity, teams can create writable tests that are easy to write and maintain.
-
-## Further Reading
-- [The Pragmatic Programmer: Your Journey to Mastery](https://www.oreilly.com/library/view/the-pragmatic-programmer-20th/9780135956977/)
