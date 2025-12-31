@@ -3,15 +3,29 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Readability Matters](#why-readability-matters)
 - [Challenges of Readable Tests](#challenges-of-readable-tests)
 - [Best Practices for Readable Tests](#best-practices-for-readable-tests)
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Definition
+
 Readable tests are tests that are easy to understand at a glance, facilitating collaboration and maintenance.
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are readable reduce the time and effort required to understand, modify, and maintain the test suite over its lifetime.
+
+**Related Properties**:
+- [Writable](writable.html) - Readable tests are also easier to write
+- [Specific](specific.html) - Clear, readable tests are easier to diagnose when they fail
+- [Minimal Data](minimal-data.html) - Using minimal data improves test readability
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Readability Matters
 
@@ -64,4 +78,11 @@ Readable tests can be implemented using various testing frameworks and tools. Th
 **Do not use inconsistent or vague names that do not clearly express the test's intent.**
 
 ## Conclusion
+
 Readable tests are crucial for facilitating collaboration, maintenance, and onboarding. By following best practices and focusing on descriptive names, clear intent, and simplicity, teams can create readable tests that are easy to understand and maintain.
+
+## Further Reading
+
+- [Clean Code - Chapter on Unit Tests](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+- [GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)
+- [Unit Test Naming Conventions](https://medium.com/@stefanovskyi/unit-test-naming-conventions-dd9208eadbea)

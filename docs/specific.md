@@ -3,15 +3,31 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Specificity Matters](#why-specificity-matters)
 - [Challenges of Specific Tests](#challenges-of-specific-tests)
 - [Best Practices for Specific Tests](#best-practices-for-specific-tests)
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Definition
+
 Specific tests are tests that pinpoint issues precisely, making it easier to identify and debug failures.
+
+**Also known as**: Diagnosable tests (term used by Arlo Bazuzi to emphasize the diagnostic value - when a test fails, it should be immediately clear what went wrong and where to look).
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are specific (diagnosable) reduce debugging time and maintenance burden, making the test suite more cost-effective over time.
+
+**Related Properties**:
+- [Isolated](isolated.html) - Isolation improves specificity by eliminating interference
+- [Readable](readable.html) - Clear tests are easier to diagnose
+- [Fast](fast.html) - Specific tests enable faster debugging cycles
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Specificity Matters
 
@@ -64,4 +80,10 @@ Specific tests can be implemented using various testing frameworks and tools. Th
 **Do not overlook dependencies that can affect the specificity and reliability of tests.**
 
 ## Conclusion
+
 Specific tests are crucial for identifying and addressing issues precisely and efficiently. By following best practices and focusing on breaking down functionalities, writing precise assertions, and isolating tests, teams can create effective specific tests that improve the overall quality of the test suite.
+
+## Further Reading
+
+- [Software Unit Test Smells](https://testsmells.org/pages/testsmells.html)
+- [7 Popular Unit Test Naming Conventions](https://dzone.com/articles/7-popular-unit-test-naming)

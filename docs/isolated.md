@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Isolation Matters](#why-isolation-matters)
 - [Challenges of Isolated Tests](#challenges-of-isolated-tests)
 - [Best Practices for Isolated Tests](#best-practices-for-isolated-tests)
@@ -13,7 +14,22 @@
 - [Further Reading](#further-reading)
 
 ## Definition
+
 In the context of software testing, isolation is a key principle. An isolated test runs independently, ensuring its result is unaffected by the state or behavior of other tests. Each test starts with a clean slate and leaves no residual effects that could impact subsequent tests.
+
+**Also known as**: Run in any Order (in the Test Desiderata 2.0 framework, this property emphasizes that isolated tests can run in any sequence).
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Fast to Get Feedback**. Isolated tests enable parallel execution and can run in any order, dramatically reducing total test suite runtime and providing faster feedback.
+
+**Related Properties**:
+- [Fast](fast.html) - Isolation enables fast, parallelizable test execution
+- [Run in Parallel](run-in-parallel.html) - Isolation is a prerequisite for true parallel execution
+- [Deterministic](deterministic.html) - Isolated tests are more likely to be deterministic
+- [Specific](specific.html) - Isolation improves test specificity by eliminating interference
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Isolation Matters
 
@@ -70,7 +86,8 @@ Recreating the necessary state for systems with intricate interdependencies can 
 Isolated tests can be implemented in various testing frameworks. The key is to ensure that each test is self-contained and does not rely on the state or behavior of other tests.
 
 ## Additional Benefit: Parallel Execution
-Isolated tests, free of shared state, can run in parallel, significantly reducing the total execution time of the test suite.
+
+Isolated tests, free of shared state, can run in parallel, significantly reducing the total execution time of the test suite. This benefit is so significant that the 2.0 framework recognizes [Run in Parallel](run-in-parallel.html) as a distinct property that builds on isolation.
 
 - Use a test runner that supports parallel execution to take advantage of this benefit.
 - Running isolated tests for different modules in parallel can drastically improve the efficiency of the testing process, especially for large systems.
@@ -90,4 +107,5 @@ Isolated tests, free of shared state, can run in parallel, significantly reducin
 Isolated tests are crucial for building a reliable and maintainable test suite. Although they may introduce overhead in setup and teardown, their benefits in consistency, debugging, and scalability far outweigh these costs. By following best practices and focusing on independent test design, teams can ensure their tests remain robust, efficient, and adaptable.
 
 ## Further Reading
+
 - [Martin Fowler - Eradicating Non-Determinism in Tests](https://martinfowler.com/articles/nonDeterminism.html)

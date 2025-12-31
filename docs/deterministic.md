@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Determinism Matters](#why-determinism-matters)
 - [Challenges of Deterministic Tests](#challenges-of-deterministic-tests)
 - [Best Practices for Deterministic Tests](#best-practices-for-deterministic-tests)
@@ -12,7 +13,19 @@
 - [Further Reading](#further-reading)
 
 ## Definition
+
 Deterministic tests are tests that produce consistent results for the same inputs, regardless of external factors.
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are deterministic reduce debugging costs by producing reliable, reproducible results, preventing time wasted on flaky tests.
+
+**Related Properties**:
+- [Isolated](isolated.html) - Isolated tests are more likely to be deterministic
+- [Automated](automated.html) - Automation relies on deterministic tests for reliability
+- [Specific](specific.html) - Deterministic failures are easier to diagnose
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Determinism Matters
 
@@ -50,7 +63,7 @@ Designing deterministic tests can be complex and requires careful planning.
 ### Isolate Time-Dependent Code
 **Isolate time-dependent code and use fixed values for date and time.**
 
-- Use libraries that allow for time manipulation, such as `freezegun` in Python.
+- Use libraries that allow for time manipulation and control over system clocks.
 - Ensure that time-dependent code produces consistent results regardless of the current time.
 
 ## Practical Example
@@ -68,5 +81,6 @@ Deterministic tests can be implemented using various testing frameworks and tool
 Deterministic tests are crucial for building a reliable and maintainable test suite. By following best practices and focusing on test doubles and controlling external factors, teams can ensure their tests remain consistent and reproducible.
 
 ## Further Reading
+
 - [Martin Fowler - Eradicating Non-Determinism in Tests](https://martinfowler.com/articles/nonDeterminism.html)
 - [Martin Fowler - Test Doubles](https://martinfowler.com/bliki/TestDouble.html)

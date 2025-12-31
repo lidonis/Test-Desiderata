@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Behavioral Testing Matters](#why-behavioral-testing-matters)
 - [Challenges of Behavioral Tests](#challenges-of-behavioral-tests)
 - [Best Practices for Behavioral Tests](#best-practices-for-behavioral-tests)
@@ -12,7 +13,21 @@
 - [Further Reading](#further-reading)
 
 ## Definition
+
 Behavioral tests focus on testing the behavior of the system rather than its internal implementation.
+
+**Also known as**: Sensitive to Behaviour (in the Test Desiderata 2.0 framework, this name emphasizes that tests should detect when behavior changes).
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Predict Success in Production**. Tests that are sensitive to functional behavior ensure the system acts as expected from the user's perspective, catching behavioral regressions before they reach production.
+
+**Related Properties**:
+- [Predictive](predictive.html) - Behavioral tests are essential for predicting production success
+- [Sensitive to Execution Qualities](execution-qualities.html) - Extends beyond functional behavior to performance and other qualities
+- [Structure-Insensitive](structure-insensitive.html) - Behavioral tests remain valid during refactoring
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Behavioral Testing Matters
 
@@ -36,7 +51,7 @@ Behavioral tests need to be updated as the system's requirements and behavior ev
 ## Best Practices for Behavioral Tests
 
 ### Use BDD Frameworks
-**Utilize Behavior-Driven Development (BDD) frameworks like Cucumber or SpecFlow to write behavioral tests.**
+**Utilize Behavior-Driven Development (BDD) frameworks to write behavioral tests in natural language.**
 
 - Write tests in a natural language that is understandable to non-technical stakeholders.
 - Collaborate with stakeholders to define the expected behavior of the system.
@@ -54,7 +69,7 @@ Behavioral tests need to be updated as the system's requirements and behavior ev
 - Remove or modify tests that no longer apply to the current behavior of the system.
 
 ## Practical Example
-Behavioral tests can be written using BDD frameworks like Cucumber. The key is to ensure that tests are written in a natural language and cover specific scenarios and expected outcomes.
+Behavioral tests can be written using BDD frameworks. The key is to ensure that tests are written in a natural language and cover specific scenarios and expected outcomes.
 
 ## Common Pitfalls
 
@@ -68,5 +83,6 @@ Behavioral tests can be written using BDD frameworks like Cucumber. The key is t
 Behavioral tests are crucial for ensuring that the system behaves as expected from the user's perspective. By following best practices and focusing on user stories and acceptance criteria, teams can create effective behavioral tests that validate the system's behavior.
 
 ## Further Reading
-- [Behavior-Driven Development - Cucumber](https://cucumber.io/docs/bdd/)
-- [Gherkin Syntax](https://cucumber.io/docs/gherkin/)
+
+- [Specification by Example](https://gojko.net/books/specification-by-example/)
+- [GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)

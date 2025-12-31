@@ -3,15 +3,31 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Writability Matters](#why-writability-matters)
 - [Challenges of Writable Tests](#challenges-of-writable-tests)
 - [Best Practices for Writable Tests](#best-practices-for-writable-tests)
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Definition
+
 Writable tests are tests that are easy to write and maintain, encouraging adoption and contribution to the test suite.
+
+**Also known as**: Easy to Write (in the Test Desiderata 2.0 framework).
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are easy to write reduce the initial cost of creating tests and encourage developers to maintain comprehensive test coverage.
+
+**Related Properties**:
+- [Readable](readable.html) - Readable tests are also easier to write
+- [Composable](composable.html) - Composability makes tests easier to write by reusing components
+- [Automated](automated.html) - Automation reduces the cost of running writable tests
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Writability Matters
 
@@ -64,4 +80,10 @@ Writable tests can be implemented using various testing frameworks and tools. Th
 **Do not use inconsistent or vague guidelines that do not clearly express the best practices for writing tests.**
 
 ## Conclusion
+
 Writable tests are crucial for encouraging adoption, improving productivity, and facilitating collaboration. By following best practices and focusing on clear guidelines, simple naming conventions, and simplicity, teams can create writable tests that are easy to write and maintain.
+
+## Further Reading
+
+- [Builder Pattern for Tests](http://www.natpryce.com/articles/000714.html)
+- [Builder Factory Pattern in Testing](https://www.harness.io/blog/builder-factory-pattern-testing)

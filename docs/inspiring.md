@@ -3,15 +3,32 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Inspiration Matters](#why-inspiration-matters)
 - [Challenges of Inspiring Tests](#challenges-of-inspiring-tests)
 - [Best Practices for Inspiring Tests](#best-practices-for-inspiring-tests)
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Definition
+
 Inspiring tests are tests that foster confidence in the system's quality and motivate quality-focused development practices.
+
+## Part of a Larger Framework
+
+**Emily Bache's Perspective**: In Test Desiderata 2.0, Bache argues that "Inspiring" is not a separate macro property, but rather an outcome of achieving **Predict Success in Production**. If tests accurately predict production behavior, they naturally inspire confidence. If they don't, no amount of other properties will make them inspiring.
+
+Therefore, inspiring tests emerge from combining predictive tests with other quality properties:
+
+**Related Properties**:
+- [Predictive](predictive.html) - The foundation of inspiring confidence
+- [Behavioral](behavioral.html) - Tests that reflect expected behavior inspire trust
+- [Deterministic](deterministic.html) - Reliable, consistent tests build confidence
+- [Automated](automated.html) - Frequent, automated execution reinforces confidence
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Inspiration Matters
 
@@ -64,4 +81,11 @@ Inspiring tests can be created using various testing frameworks and tools. The k
 **Do not ignore feedback from developers and stakeholders. Use their input to improve tests continuously.**
 
 ## Conclusion
+
 Inspiring tests are crucial for fostering a culture of quality-focused development. By following best practices and focusing on meaningful and engaging tests, teams can create inspiring tests that motivate developers and build confidence in the system's quality.
+
+## Further Reading
+
+- [Test Coverage Metrics](https://martinfowler.com/bliki/TestCoverage.html)
+- [Building a Testing Culture](https://testing.googleblog.com/)
+- [Communicating Test Value](https://www.ministryoftesting.com/)

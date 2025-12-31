@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Speed Matters](#why-speed-matters)
 - [Challenges of Fast Tests](#challenges-of-fast-tests)
 - [Best Practices for Fast Tests](#best-practices-for-fast-tests)
@@ -10,7 +11,19 @@
 - [Further Reading](#further-reading)
 
 ## Definition
+
 Fast tests are tests that execute quickly, providing developers with immediate feedback on the codebase's state. They focus on minimizing delays during development and integration cycles, enabling rapid iteration and efficient debugging.
+
+## Part of a Larger Framework
+
+This principle is central to the macro goal of **Fast to Get Feedback**. Fast tests enable rapid iteration by providing immediate feedback on code changes, helping developers catch issues early and stay in flow.
+
+**Related Properties**:
+- [Minimal Data](minimal-data.html) - Using less data improves test speed
+- [Isolated](isolated.html) - Enables parallel execution for faster suite runtime
+- [Run in Parallel](run-in-parallel.html) - Leverages multiple cores for speed
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Speed Matters
 
@@ -53,6 +66,13 @@ Write tests that target specific units of functionality to minimize complexity a
 
 **Example**: Test a single method for calculating discounts instead of testing the entire checkout process in one go.
 
+### Use Minimal Data
+**Use only the data necessary for each test to reduce setup time and improve clarity.**
+
+Creating excessive test data slows down execution and obscures test intent. See [Minimal Data](minimal-data.html) for detailed strategies.
+
+**Example**: Testing password validation? One user object is sufficient - don't populate their entire profile.
+
 ### Use In-Memory Solutions
 Replace external dependencies, such as databases or file systems, with in-memory equivalents to avoid I/O delays.
 
@@ -67,6 +87,8 @@ Reduce the overhead of creating and cleaning up test environments by sharing reu
 Leverage parallel execution to reduce overall test suite runtime, especially for independent tests.
 
 **Example**: Run tests for separate modules, such as authentication and payment processing, simultaneously.
+
+*See [Run in Parallel](run-in-parallel.html) for strategies to maximize parallel execution benefits.*
 
 ### Prioritize Unit Tests
 Unit tests are inherently faster than integration or end-to-end tests. Focus on covering as much functionality as possible with unit tests.
@@ -92,5 +114,6 @@ Fast tests support scalability by ensuring that large test suites can run within
 Fast tests are essential for maintaining a productive development workflow and ensuring rapid feedback during CI/CD cycles. By focusing on small, focused tests, optimizing setup and teardown, and leveraging parallel execution, teams can achieve speed without sacrificing reliability or coverage. Fast tests not only improve productivity but also encourage a culture of frequent testing, enabling robust and agile software development.
 
 ## Further Reading
-- [Martin Fowler - Testing](https://martinfowler.com/testing/)
+
 - [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html)
+- [Martin Fowler - Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)

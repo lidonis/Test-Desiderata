@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Automation Matters](#why-automation-matters)
 - [Challenges of Automated Tests](#challenges-of-automated-tests)
 - [Best Practices for Automated Tests](#best-practices-for-automated-tests)
@@ -12,7 +13,19 @@
 - [Further Reading](#further-reading)
 
 ## Definition
+
 Automated tests are tests that run automatically, typically as part of a continuous integration/continuous deployment (CI/CD) pipeline.
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Automated tests reduce the long-term cost of testing by eliminating manual effort and enabling frequent, consistent execution at scale.
+
+**Related Properties**:
+- [Deterministic](deterministic.html) - Automation requires deterministic tests for reliability
+- [Fast](fast.html) - Fast tests make automation more practical
+- [Isolated](isolated.html) - Isolated tests can be automated more easily
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Automation Matters
 
@@ -38,7 +51,7 @@ Automated tests require ongoing maintenance to keep them up-to-date with changes
 ### Use CI/CD Pipelines
 **Integrate automated tests into your CI/CD pipelines to ensure they run consistently.**
 
-- Use tools like Jenkins, GitHub Actions, or GitLab CI to automate your test runs.
+- Use continuous integration and continuous deployment (CI/CD) tools to automate your test runs.
 - Ensure that tests are run on every code change to catch issues early.
 
 ### Write Reliable Tests
@@ -68,6 +81,7 @@ Automated tests can be implemented using various tools and frameworks. The key i
 Automated tests are essential for building a reliable and maintainable test suite. By following best practices and focusing on consistent and efficient test automation, teams can ensure their tests remain robust and effective.
 
 ## Further Reading
+
 - [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)
 - [Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
 - [Test Automation Pyramid](https://martinfowler.com/bliki/TestPyramid.html)

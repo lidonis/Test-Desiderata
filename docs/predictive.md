@@ -3,15 +3,29 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Predictiveness Matters](#why-predictiveness-matters)
 - [Challenges of Predictive Tests](#challenges-of-predictive-tests)
 - [Best Practices for Predictive Tests](#best-practices-for-predictive-tests)
 - [Practical Example](#practical-example)
 - [Common Pitfalls](#common-pitfalls)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Definition
+
 Predictive tests are tests that mirror real-world behavior to ensure reliability and predictability in production.
+
+## Part of a Larger Framework
+
+This principle maps directly to the macro goal of **Predict Success in Production**. Predictive tests provide confidence that the code will work correctly in production by simulating real-world conditions and behavior.
+
+**Related Properties**:
+- [Behavioral](behavioral.html) - Tests focused on behavior contribute to predictiveness
+- [Sensitive to Execution Qualities](execution-qualities.html) - Extends predictiveness to non-functional requirements
+- [Deterministic](deterministic.html) - Predictive tests should produce consistent results
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Predictiveness Matters
 
@@ -64,4 +78,11 @@ Predictive tests can be implemented using various testing frameworks and tools. 
 **Do not overlook edge cases and unusual scenarios that can affect the system's behavior in production.**
 
 ## Conclusion
+
 Predictive tests are crucial for ensuring that the system behaves as expected in real-world scenarios. By following best practices and focusing on real-world scenarios and simulation, teams can create effective predictive tests that validate the system's behavior and improve its robustness.
+
+## Further Reading
+
+- [Testing in Production](https://martinfowler.com/articles/testing-in-production.html)
+- [Integration Testing](https://martinfowler.com/bliki/IntegrationTest.html)
+- [Production-like Test Environments](https://testing.googleblog.com/)

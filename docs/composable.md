@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Definition](#definition)
+- [Part of a Larger Framework](#part-of-a-larger-framework)
 - [Why Composability Matters](#why-composability-matters)
 - [Challenges of Composable Tests](#challenges-of-composable-tests)
 - [Best Practices for Composable Tests](#best-practices-for-composable-tests)
@@ -12,7 +13,19 @@
 - [Further Reading](#further-reading)
 
 ## Definition
+
 Composable tests are tests that focus on individual components and can be combined seamlessly to test larger systems.
+
+## Part of a Larger Framework
+
+This principle contributes to the macro goal of **Support Ongoing Code Design Change**. Composable tests enable modular design, support Test-Driven Development practices, and make it easier to evolve the codebase by testing components independently.
+
+**Related Properties**:
+- [Structure-Insensitive](structure-insensitive.html) - Composable tests support refactoring without breaking
+- [Behavioral](behavioral.html) - Focus on component behavior rather than implementation
+- [Writable](writable.html) - Composability makes tests easier to write by reusing components
+
+*Learn more about how test properties work together in our [framework overview](framework.html).*
 
 ## Why Composability Matters
 
@@ -68,5 +81,6 @@ Composable tests can be implemented using various testing frameworks and tools. 
 Composable tests are essential for testing complex systems effectively. By following best practices and focusing on modular code and dependency injection, teams can create scalable and maintainable composable tests.
 
 ## Further Reading
+
 - [Modular Programming](https://en.wikipedia.org/wiki/Modular_programming)
 - [Dependency Injection](https://martinfowler.com/articles/injection.html)
