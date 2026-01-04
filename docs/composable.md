@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Composable Tests
 
 ## Table of Contents
@@ -21,11 +24,11 @@ Composable tests are tests that focus on individual components and can be combin
 This principle contributes to the macro goal of **Support Ongoing Code Design Change**. Composable tests enable modular design, support Test-Driven Development practices, and make it easier to evolve the codebase by testing components independently.
 
 **Related Properties**:
-- [Structure-Insensitive](structure-insensitive.html) - Composable tests support refactoring without breaking
-- [Behavioral](behavioral.html) - Focus on component behavior rather than implementation
-- [Writable](writable.html) - Composability makes tests easier to write by reusing components
+- [Structure-Insensitive](structure-insensitive.md) - Composable tests support refactoring without breaking
+- [Behavioral](behavioral.md) - Focus on component behavior rather than implementation
+- [Writable](writable.md) - Composability makes tests easier to write by reusing components
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Composability Matters
 

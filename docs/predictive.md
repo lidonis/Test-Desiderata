@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Predictive Tests
 
 ## Table of Contents
@@ -21,11 +24,11 @@ Predictive tests are tests that mirror real-world behavior to ensure reliability
 This principle maps directly to the macro goal of **Predict Success in Production**. Predictive tests provide confidence that the code will work correctly in production by simulating real-world conditions and behavior.
 
 **Related Properties**:
-- [Behavioral](behavioral.html) - Tests focused on behavior contribute to predictiveness
-- [Sensitive to Execution Qualities](execution-qualities.html) - Extends predictiveness to non-functional requirements
-- [Deterministic](deterministic.html) - Predictive tests should produce consistent results
+- [Behavioral](behavioral.md) - Tests focused on behavior contribute to predictiveness
+- [Sensitive to Execution Qualities](execution-qualities.md) - Extends predictiveness to non-functional requirements
+- [Deterministic](deterministic.md) - Predictive tests should produce consistent results
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Predictiveness Matters
 

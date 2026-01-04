@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Readable Tests
 
 ## Table of Contents
@@ -21,11 +24,11 @@ Readable tests are tests that are easy to understand at a glance, facilitating c
 This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are readable reduce the time and effort required to understand, modify, and maintain the test suite over its lifetime.
 
 **Related Properties**:
-- [Writable](writable.html) - Readable tests are also easier to write
-- [Specific](specific.html) - Clear, readable tests are easier to diagnose when they fail
-- [Minimal Data](minimal-data.html) - Using minimal data improves test readability
+- [Writable](writable.md) - Readable tests are also easier to write
+- [Specific](specific.md) - Clear, readable tests are easier to diagnose when they fail
+- [Minimal Data](minimal-data.md) - Using minimal data improves test readability
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Readability Matters
 

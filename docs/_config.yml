@@ -2,3 +2,10 @@
 title: Test Desiderata
 description: Strategies for Creating Comprehensive Yet Efficient Test Suites
 theme: jekyll-theme-architect
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Automated Tests
 
 ## Table of Contents
@@ -21,11 +24,11 @@ Automated tests are tests that run automatically, typically as part of a continu
 This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Automated tests reduce the long-term cost of testing by eliminating manual effort and enabling frequent, consistent execution at scale.
 
 **Related Properties**:
-- [Deterministic](deterministic.html) - Automation requires deterministic tests for reliability
-- [Fast](fast.html) - Fast tests make automation more practical
-- [Isolated](isolated.html) - Isolated tests can be automated more easily
+- [Deterministic](deterministic) - Automation requires deterministic tests for reliability
+- [Fast](fast.md) - Fast tests make automation more practical
+- [Isolated](isolated.md) - Isolated tests can be automated more easily
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Automation Matters
 

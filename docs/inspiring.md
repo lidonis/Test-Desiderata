@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Inspiring Tests
 
 ## Table of Contents
@@ -23,12 +26,12 @@ Inspiring tests are tests that foster confidence in the system's quality and mot
 Therefore, inspiring tests emerge from combining predictive tests with other quality properties:
 
 **Related Properties**:
-- [Predictive](predictive.html) - The foundation of inspiring confidence
-- [Behavioral](behavioral.html) - Tests that reflect expected behavior inspire trust
-- [Deterministic](deterministic.html) - Reliable, consistent tests build confidence
-- [Automated](automated.html) - Frequent, automated execution reinforces confidence
+- [Predictive](predictive.md) - The foundation of inspiring confidence
+- [Behavioral](behavioral.md) - Tests that reflect expected behavior inspire trust
+- [Deterministic](deterministic.md) - Reliable, consistent tests build confidence
+- [Automated](automated.md) - Frequent, automated execution reinforces confidence
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Inspiration Matters
 

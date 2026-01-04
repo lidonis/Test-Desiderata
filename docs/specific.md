@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Specific Tests
 
 ## Table of Contents
@@ -23,11 +26,11 @@ Specific tests are tests that pinpoint issues precisely, making it easier to ide
 This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are specific (diagnosable) reduce debugging time and maintenance burden, making the test suite more cost-effective over time.
 
 **Related Properties**:
-- [Isolated](isolated.html) - Isolation improves specificity by eliminating interference
-- [Readable](readable.html) - Clear tests are easier to diagnose
-- [Fast](fast.html) - Specific tests enable faster debugging cycles
+- [Isolated](isolated.md) - Isolation improves specificity by eliminating interference
+- [Readable](readable.md) - Clear tests are easier to diagnose
+- [Fast](fast.md) - Specific tests enable faster debugging cycles
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Specificity Matters
 

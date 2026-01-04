@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Writable Tests
 
 ## Table of Contents
@@ -23,11 +26,11 @@ Writable tests are tests that are easy to write and maintain, encouraging adopti
 This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are easy to write reduce the initial cost of creating tests and encourage developers to maintain comprehensive test coverage.
 
 **Related Properties**:
-- [Readable](readable.html) - Readable tests are also easier to write
-- [Composable](composable.html) - Composability makes tests easier to write by reusing components
-- [Automated](automated.html) - Automation reduces the cost of running writable tests
+- [Readable](readable.md) - Readable tests are also easier to write
+- [Composable](composable.md) - Composability makes tests easier to write by reusing components
+- [Automated](automated.md) - Automation reduces the cost of running writable tests
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Writability Matters
 

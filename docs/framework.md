@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Understanding the Test Desiderata Framework
 
 ## Table of Contents
@@ -33,7 +36,7 @@ Tests should be sensitive to problems that will occur in the real world. This go
 
 **Supporting Properties**:
 
-- **[Behavioral](behavioral.html)** (Beck) - Tests reflect the expected functional behavior of the system
+- **[Behavioral](behavioral.md)** (Beck) - Tests reflect the expected functional behavior of the system
 - **Sensitive to Execution Qualities** (NEW) - Tests detect performance degradation, security issues, and other non-functional problems
 
 **Why This Matters**: Tests that pass but don't predict production success create false confidence. Teams deploy broken code because their tests didn't capture realistic failure modes.
@@ -49,7 +52,7 @@ Fast feedback keeps developers in flow, catches mistakes early when context is f
 **Supporting Properties**:
 
 - **Minimal Data** (NEW) - Use only essential data to reduce setup time and improve clarity
-- **[Isolated](isolated.html)** (Beck, "Run in any Order") - Tests run independently, enabling any execution order
+- **[Isolated](isolated.md)** (Beck, "Run in any Order") - Tests run independently, enabling any execution order
 - **Run in Parallel** (NEW) - Tests can run simultaneously without interference, leveraging modern hardware
 
 **Why This Matters**: Slow test suites discourage frequent testing. Developers skip running tests, commit untested code, and catch bugs later when they're harder to fix.
@@ -64,7 +67,7 @@ This macro property captures the TDD benefit Beck didn't explicitly mention: tes
 
 **Supporting Properties**:
 
-- **[Composable](composable.html)** (Beck) - Tests focus on components that combine seamlessly
+- **[Composable](composable.md)** (Beck) - Tests focus on components that combine seamlessly
 - **Documents Intent** (Shore) - Tests clearly express what the code should do
 - **Durable** (Cunningham) - Tests remain valuable throughout the product lifetime
 - **Necessary** (Farley) - Tests guide development choices rather than just checking correctness
@@ -83,13 +86,13 @@ Tests have costs: time to write, time to run, time to maintain. Minimizing total
 
 **Supporting Properties**:
 
-- **[Automated](automated.html)** (Beck) - Tests run automatically without manual intervention
-- **[Deterministic](deterministic.html)** (Beck) - Tests produce consistent results
-- **[Specific](specific.html)** (Beck, "Diagnosable" per Bazuzi) - Tests pinpoint issues precisely
-- **[Readable](readable.html)** (Beck, "Easy to Read") - Tests are easy to understand
+- **[Automated](automated.md)** (Beck) - Tests run automatically without manual intervention
+- **[Deterministic](deterministic.md)** (Beck) - Tests produce consistent results
+- **[Specific](specific.md)** (Beck, "Diagnosable" per Bazuzi) - Tests pinpoint issues precisely
+- **[Readable](readable.md)** (Beck, "Easy to Read") - Tests are easy to understand
 - **Easy to Update** (NEW) - When requirements change, tests are easy to modify
-- **[Writable](writable.html)** (Beck, "Easy to Write") - Tests are easy to create
-- **[Structure-Insensitive](structure-insensitive.html)** (Beck) - Tests remain valid despite code refactoring
+- **[Writable](writable.md)** (Beck, "Easy to Write") - Tests are easy to create
+- **[Structure-Insensitive](structure-insensitive.md)** (Beck) - Tests remain valid despite code refactoring
 
 **Why This Matters**: Tests with high maintenance costs eventually get abandoned. Flaky tests get ignored. Unreadable tests don't communicate intent. Expensive test suites undermine their own value.
 
@@ -101,24 +104,24 @@ This table shows the complete mapping of individual properties to macro goals:
 
 | Individual Property | Macro Goal | Beck's Original? |
 |---------------------|------------|------------------|
-| [Behavioral](behavioral.html) | Predict Success in Production | Yes |
+| [Behavioral](behavioral.md) | Predict Success in Production | Yes |
 | Sensitive to Execution Qualities | Predict Success in Production | **No - NEW** |
 | Minimal Data | Fast to Get Feedback | **No - NEW** |
-| [Isolated](isolated.html) | Fast to Get Feedback | Yes (as "Isolated") |
+| [Isolated](isolated.md) | Fast to Get Feedback | Yes (as "Isolated") |
 | Run in Parallel | Fast to Get Feedback | **No - NEW** |
-| [Composable](composable.html) | Support Ongoing Code Design Change | Yes |
+| [Composable](composable.md) | Support Ongoing Code Design Change | Yes |
 | Documents Intent | Support Ongoing Code Design Change | No (Shore) |
 | Durable | Support Ongoing Code Design Change | No (Cunningham) |
 | Necessary | Support Ongoing Code Design Change | No (Farley) |
 | Organized | Support Ongoing Code Design Change | No (Bazuzi, Rainsberger) |
 | Positive Design Pressure | Support Ongoing Code Design Change | **No - NEW** |
-| [Automated](automated.html) | Minimize Total Cost of Ownership | Yes |
-| [Deterministic](deterministic.html) | Minimize Total Cost of Ownership | Yes |
-| [Specific](specific.html) | Minimize Total Cost of Ownership | Yes (as "Specific") |
-| [Readable](readable.html) | Minimize Total Cost of Ownership | Yes (as "Readable") |
+| [Automated](automated.md) | Minimize Total Cost of Ownership | Yes |
+| [Deterministic](deterministic.md) | Minimize Total Cost of Ownership | Yes |
+| [Specific](specific.md) | Minimize Total Cost of Ownership | Yes (as "Specific") |
+| [Readable](readable.md) | Minimize Total Cost of Ownership | Yes (as "Readable") |
 | Easy to Update | Minimize Total Cost of Ownership | **No - NEW** |
-| [Writable](writable.html) | Minimize Total Cost of Ownership | Yes (as "Writable") |
-| [Structure-Insensitive](structure-insensitive.html) | Minimize Total Cost of Ownership | Yes |
+| [Writable](writable.md) | Minimize Total Cost of Ownership | Yes (as "Writable") |
+| [Structure-Insensitive](structure-insensitive.md) | Minimize Total Cost of Ownership | Yes |
 
 ### What About Fast and Predictive?
 

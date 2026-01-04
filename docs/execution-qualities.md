@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 # Sensitive to Execution Qualities
 
@@ -22,11 +25,11 @@ Tests that are sensitive to execution qualities detect changes in non-functional
 This principle contributes to the macro goal of **Predict Success in Production**. While functional tests verify that code produces correct results, execution quality tests ensure the system will perform acceptably under real-world conditions.
 
 **Related Properties**:
-- [Behavioral](behavioral.html) - Focuses on functional behavior; execution qualities extend beyond function to performance
-- [Predictive](predictive.html) - Execution quality tests are essential for predicting production success
-- [Deterministic](deterministic.html) - Consistent performance measurements require deterministic tests
+- [Behavioral](behavioral.md) - Focuses on functional behavior; execution qualities extend beyond function to performance
+- [Predictive](predictive.md) - Execution quality tests are essential for predicting production success
+- [Deterministic](deterministic.md) - Consistent performance measurements require deterministic tests
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Execution Qualities Matter
 

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:lidonis.github.io)",
+      "WebFetch(domain:pages.github.com)",
+      "Bash(just serve)",
+      "Bash(just update)",
+      "Bash(just check-versions)"
+    ]
+  }
+}

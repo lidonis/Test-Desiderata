@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Behavioral Tests
 
 ## Table of Contents
@@ -23,11 +26,11 @@ Behavioral tests focus on testing the behavior of the system rather than its int
 This principle contributes to the macro goal of **Predict Success in Production**. Tests that are sensitive to functional behavior ensure the system acts as expected from the user's perspective, catching behavioral regressions before they reach production.
 
 **Related Properties**:
-- [Predictive](predictive.html) - Behavioral tests are essential for predicting production success
-- [Sensitive to Execution Qualities](execution-qualities.html) - Extends beyond functional behavior to performance and other qualities
-- [Structure-Insensitive](structure-insensitive.html) - Behavioral tests remain valid during refactoring
+- [Predictive](predictive.md) - Behavioral tests are essential for predicting production success
+- [Sensitive to Execution Qualities](execution-qualities.md) - Extends beyond functional behavior to performance and other qualities
+- [Structure-Insensitive](structure-insensitive.md) - Behavioral tests remain valid during refactoring
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Behavioral Testing Matters
 

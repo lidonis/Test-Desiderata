@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Deterministic Tests
 
 ## Table of Contents
@@ -21,11 +24,11 @@ Deterministic tests are tests that produce consistent results for the same input
 This principle contributes to the macro goal of **Minimize Total Cost of Ownership**. Tests that are deterministic reduce debugging costs by producing reliable, reproducible results, preventing time wasted on flaky tests.
 
 **Related Properties**:
-- [Isolated](isolated.html) - Isolated tests are more likely to be deterministic
-- [Automated](automated.html) - Automation relies on deterministic tests for reliability
-- [Specific](specific.html) - Deterministic failures are easier to diagnose
+- [Isolated](isolated.md) - Isolated tests are more likely to be deterministic
+- [Automated](automated.md) - Automation relies on deterministic tests for reliability
+- [Specific](specific.md) - Deterministic failures are easier to diagnose
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Determinism Matters
 

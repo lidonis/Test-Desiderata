@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Isolated Tests
 
 ## Table of Contents
@@ -24,12 +27,12 @@ In the context of software testing, isolation is a key principle. An isolated te
 This principle contributes to the macro goal of **Fast to Get Feedback**. Isolated tests enable parallel execution and can run in any order, dramatically reducing total test suite runtime and providing faster feedback.
 
 **Related Properties**:
-- [Fast](fast.html) - Isolation enables fast, parallelizable test execution
-- [Run in Parallel](run-in-parallel.html) - Isolation is a prerequisite for true parallel execution
-- [Deterministic](deterministic.html) - Isolated tests are more likely to be deterministic
-- [Specific](specific.html) - Isolation improves test specificity by eliminating interference
+- [Fast](fast.md) - Isolation enables fast, parallelizable test execution
+- [Run in Parallel](run-in-parallel.md) - Isolation is a prerequisite for true parallel execution
+- [Deterministic](deterministic.md) - Isolated tests are more likely to be deterministic
+- [Specific](specific.md) - Isolation improves test specificity by eliminating interference
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Isolation Matters
 
@@ -87,7 +90,7 @@ Isolated tests can be implemented in various testing frameworks. The key is to e
 
 ## Additional Benefit: Parallel Execution
 
-Isolated tests, free of shared state, can run in parallel, significantly reducing the total execution time of the test suite. This benefit is so significant that the 2.0 framework recognizes [Run in Parallel](run-in-parallel.html) as a distinct property that builds on isolation.
+Isolated tests, free of shared state, can run in parallel, significantly reducing the total execution time of the test suite. This benefit is so significant that the 2.0 framework recognizes [Run in Parallel](run-in-parallel.md) as a distinct property that builds on isolation.
 
 - Use a test runner that supports parallel execution to take advantage of this benefit.
 - Running isolated tests for different modules in parallel can drastically improve the efficiency of the testing process, especially for large systems.

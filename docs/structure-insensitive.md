@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Structure-Insensitive Tests
 
 ## Table of Contents
@@ -25,11 +28,11 @@ This principle contributes to the macro goal of **Minimize Total Cost of Ownersh
 **Note on Framework Evolution**: In Emily Bache's December 9, 2025 update to Test Desiderata 2.0, this property was moved from "Support Ongoing Code Design Change" to "Minimize Total Cost of Ownership." While structure-insensitive tests do support refactoring (design change), their primary benefit is reducing maintenance costs.
 
 **Related Properties**:
-- [Behavioral](behavioral.html) - Focus on behavior makes tests structure-insensitive
-- [Composable](composable.html) - Component-based design supports structure independence
-- [Readable](readable.html) - Structure-insensitive tests are often more readable
+- [Behavioral](behavioral.md) - Focus on behavior makes tests structure-insensitive
+- [Composable](composable.md) - Component-based design supports structure independence
+- [Readable](readable.md) - Structure-insensitive tests are often more readable
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Structure Insensitivity Matters
 

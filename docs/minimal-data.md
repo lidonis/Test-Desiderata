@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Minimal Data
 
 ## Table of Contents
@@ -21,12 +24,12 @@ Minimal data tests use only the essential data needed to verify the behavior und
 This principle contributes to the macro goal of **Fast to Get Feedback**. Tests that use minimal data execute more quickly, are easier to set up, and provide faster iteration cycles during development.
 
 **Related Properties**:
-- [Fast](fast.html) - Minimal data directly improves test speed
-- [Isolated](isolated.html) - Less data means simpler setup/teardown
-- [Readable](readable.html) - Minimal data makes test intent clearer
-- [Writable](writable.html) - Easier to write tests with less data setup
+- [Fast](fast.md) - Minimal data directly improves test speed
+- [Isolated](isolated.md) - Less data means simpler setup/teardown
+- [Readable](readable.md) - Minimal data makes test intent clearer
+- [Writable](writable.md) - Easier to write tests with less data setup
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Minimal Data Matters
 

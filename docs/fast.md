@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Fast Tests
 
 ## Table of Contents
@@ -19,11 +22,11 @@ Fast tests are tests that execute quickly, providing developers with immediate f
 This principle is central to the macro goal of **Fast to Get Feedback**. Fast tests enable rapid iteration by providing immediate feedback on code changes, helping developers catch issues early and stay in flow.
 
 **Related Properties**:
-- [Minimal Data](minimal-data.html) - Using less data improves test speed
-- [Isolated](isolated.html) - Enables parallel execution for faster suite runtime
-- [Run in Parallel](run-in-parallel.html) - Leverages multiple cores for speed
+- [Minimal Data](minimal-data.md) - Using less data improves test speed
+- [Isolated](isolated.md) - Enables parallel execution for faster suite runtime
+- [Run in Parallel](run-in-parallel.md) - Leverages multiple cores for speed
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Speed Matters
 
@@ -69,7 +72,7 @@ Write tests that target specific units of functionality to minimize complexity a
 ### Use Minimal Data
 **Use only the data necessary for each test to reduce setup time and improve clarity.**
 
-Creating excessive test data slows down execution and obscures test intent. See [Minimal Data](minimal-data.html) for detailed strategies.
+Creating excessive test data slows down execution and obscures test intent. See [Minimal Data](minimal-data.md) for detailed strategies.
 
 **Example**: Testing password validation? One user object is sufficient - don't populate their entire profile.
 
@@ -88,7 +91,7 @@ Leverage parallel execution to reduce overall test suite runtime, especially for
 
 **Example**: Run tests for separate modules, such as authentication and payment processing, simultaneously.
 
-*See [Run in Parallel](run-in-parallel.html) for strategies to maximize parallel execution benefits.*
+*See [Run in Parallel](run-in-parallel.md) for strategies to maximize parallel execution benefits.*
 
 ### Prioritize Unit Tests
 Unit tests are inherently faster than integration or end-to-end tests. Focus on covering as much functionality as possible with unit tests.

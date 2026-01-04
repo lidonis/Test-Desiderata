@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Run in Parallel
 
 ## Table of Contents
@@ -21,11 +24,11 @@ Tests that run in parallel can execute simultaneously with other tests, or even 
 This principle contributes to the macro goal of **Fast to Get Feedback**. Tests that can run in parallel leverage modern multi-core processors and distributed CI/CD systems, dramatically reducing total test suite runtime.
 
 **Related Properties**:
-- [Isolated](isolated.html) - Parallel execution builds on test isolation
-- [Fast](fast.html) - Parallelization is a key strategy for achieving fast feedback
-- [Minimal Data](minimal-data.html) - Minimal setup enables faster parallel execution
+- [Isolated](isolated.md) - Parallel execution builds on test isolation
+- [Fast](fast.md) - Parallelization is a key strategy for achieving fast feedback
+- [Minimal Data](minimal-data.md) - Minimal setup enables faster parallel execution
 
-*Learn more about how test properties work together in our [framework overview](framework.html).*
+*Learn more about how test properties work together in our [framework overview](framework.md).*
 
 ## Why Running in Parallel Matters
 
